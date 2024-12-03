@@ -30,7 +30,7 @@
 currency-converter-app/
 ├── index.html          # Главный HTML файл
 ├── style.css           # Файл со стилями
-└── 
+└── js
   ├── country-list.js   # Список валют
   └── script.js         # Основной JavaScript файл
 ```
