@@ -55,8 +55,10 @@ function getExchangeRate(){
         amount.value = "1";
         amountVal = 1;
     }
+    // API-key можно получить - https://app.exchangerate-api.com/
+    const apiKey = 'f2cd93cc5c526e3204de8e90';
     exchangeRateTxt.innerText = "Получаем обменный курс...";
-    let url = `https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/${fromCurrency.value}`;
+    let url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency.value}`;
     // Получаем ответ от API и обрабатываем его, преобразуя в объект JS
     fetch(url).then(response => response.json()).then(result =>{
         let exchangeRate = result.conversion_rates[toCurrency.value]; // Получаем курс обмена для выбранной валюты В
